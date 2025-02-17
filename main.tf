@@ -2,6 +2,6 @@ module "Google-Storage" {
   source              = "./modules/Google-Storage"
 }
 
-module "OpenStack" {
-  source              = "./modules/OpenStack"
+module "Azure" {
+  source              = "./modules/Azure"
 }
