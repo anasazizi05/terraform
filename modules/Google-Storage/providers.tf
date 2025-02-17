@@ -1,7 +1,16 @@
 terraform {
-# *** YOUR CODE HERE ***
+  required_version = ">= 0.14"
+
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = ">= 3.5"
+    }
+  }
 }
 
 provider "google" {
-# *** YOUR CODE HERE ***
+  credentials = file("gcp-identity.json") 
+  project     = var.gcp_project
+  region      = "us-central1"
 }
